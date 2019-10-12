@@ -11,7 +11,7 @@ Defer the execution of a function until the surrounding function completes based
 To install this package
 
 ```linux
-$ composer require origin/defer
+$ composer require originphp/defer
 ```
 
 ## Usage
@@ -27,4 +27,10 @@ public function doSomething()
     ...
     return $result;
 }
+```
+
+Or 
+
+```php
+defer($var,[$this,'method']);
 ```
