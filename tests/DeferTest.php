@@ -21,10 +21,16 @@ class DeferTest extends \PHPUnit\Framework\TestCase
     public function testDefer()
     {
         $foo = new Foo();
+
+        $foo->createTempFile();
+        $this->assertTrue($foo->tempFileExists());
+
         $foo->test();
         $expected = ['---','end','args','start'];
-
+    
         $this->assertEquals($expected, $foo->result);
         $this->assertEquals([4,5,6,7], $foo->args);
+
+        $this->assertFalse($foo->tempFileExists());
     }
 }
