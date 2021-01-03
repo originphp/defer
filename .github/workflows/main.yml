@@ -22,7 +22,7 @@ jobs:
           tools: composer:v2
       - name: Install dependencies
         run: |
-          composer require php-coveralls/php-coveralls:^2.2 --dev --no-update
+          composer require php-coveralls/php-coveralls:^2.4 --dev --no-update
           composer update --no-progress --prefer-dist
       - name: Running PHPUnit
         run: "php vendor/bin/phpunit --coverage-clover=clover.xml"
