@@ -8,7 +8,6 @@ jobs:
     strategy:
       matrix:
         php-version:
-          - "7.2"
           - "7.3"
           - "7.4"
           - "8.0"
@@ -26,9 +25,9 @@ jobs:
           composer require php-coveralls/php-coveralls:^2.2 --dev --no-update
           composer update --no-progress --prefer-dist
       - name: Running PHPUnit
-        run: "php vendor/bin/phpunit --coverage-clover"
+        run: "php vendor/bin/phpunit --coverage-clover=clover.xml"
       - name: Coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: "php vendor/bin/php-coveralls"
+        run: "php vendor/bin/php-coveralls --verbose"
         if: ${{ success() }}
