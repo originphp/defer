@@ -16,6 +16,8 @@ $ composer require originphp/defer
 
 ## Usage
 
+> As of version 3.0 the defer function has been moved to its own namespace to prevent clashing with other libraries and PHP extensions.
+
 To defer the execution of a function until the surrounding function completes, calls are executed in Last In First Out order.
 
 ```php
