@@ -1,5 +1,7 @@
 <?php
-namespace Origin\Test\Defer\Lib;
+namespace Origin\Defer\Test\Lib;
+
+use function Origin\Defer\defer;
 
 use Exception;
 

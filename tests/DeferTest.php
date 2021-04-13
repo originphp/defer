@@ -12,9 +12,9 @@
  * @license     https://opensource.org/licenses/mit-license.php MIT License
  */
 
-namespace Origin\Test\Defer;
+namespace Origin\Defer\Test;
 
-use Origin\Test\Defer\Lib\Foo;
+use Origin\Defer\Test\Lib\Foo;
 
 class DeferTest extends \PHPUnit\Framework\TestCase
 {

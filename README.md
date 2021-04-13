@@ -18,8 +18,9 @@ $ composer require originphp/defer
 
 To defer the execution of a function until the surrounding function completes, calls are executed in Last In First Out order.
 
-
 ```php
+use function Origin\Defer\defer;
+
 public function doSomething()
 {
     $fileHandle = fopen($this->filename, 'rt');
@@ -29,8 +30,9 @@ public function doSomething()
 }
 ```
 
-Or 
+Or
 
 ```php
+use function Origin\Defer\defer;
 defer($var,[$this,'method']);
 ```
